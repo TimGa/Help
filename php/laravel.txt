@@ -1,0 +1,11 @@
+# migration
+docker-compose exec app php artisan migrate
+
+# update tables according to migrations
+docker-compose exec app php artisan migrate:refresh
+
+# remove tables and do migration
+docker-compose exec app php artisan migrate:fresh
+
+# create migration(table)
+docker-compose exec app php artisan make:migration create_projects_table --create=projects
