@@ -9,3 +9,12 @@ docker-compose exec app php artisan migrate:fresh
 
 # create migration(table)
 docker-compose exec app php artisan make:migration create_projects_table --create=projects
+
+# create Controller
+docker-compose exec app php artisan make:controller SomeNewController
+
+# link from storage
+docker-compose exec app php artisan storage:link
+
+# create request class for validation
+docker-compose exec app php artisan make:request CreateProjectTypeInstruction
