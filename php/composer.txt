@@ -3,8 +3,16 @@
 ^1.2.3  # до 2.0 (не включительно)
 
 # json
-"autoload": {
-    "psr-4": {
-        "TimGa\\FillDb\\": "src/"
+{
+    "name": "timga/factory-method",
+    
+    "require": {
+        "php": "^7.1"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "TimGa\\FactoryMethod\\": "src/"
+        }
     }
 }
