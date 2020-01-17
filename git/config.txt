@@ -1,8 +1,17 @@
+# config for all users of current system and their repos (/etc/gitconfig)
+git config --system -l
+
+# config for current user (~/.gitconfig or ~/.config/git/config)
+git config --global -l
+
+# config for current repo (.git/config)
+git config -l
+
 # set name
-git config --global user.name "timofey"
+git config --global user.name "TimGa"
 
 # set email
-git config --global user.email "gavryutenko.timofey.gennadievich@huawei.com"
+git config --global user.email "tgavryutenko@mail.ru"
 
 # unset alias
 git config --global --unset alias.trololo

@@ -13,4 +13,11 @@ git log -p -- <файл>
 git log --follow -p -- <файл>
 
 # Changes made in commit
-git diff COMMIT~ COMMIT will show you the difference between that COMMIT's ancestor and the COMMIT
+git diff COMMIT~ COMMIT
+
+# Show files in commit
+git show --name-only <хэш комита>
+
+# Add file(s) to previous local commit
+git add <файл>
+git commit --amend
