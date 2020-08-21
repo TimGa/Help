@@ -12,12 +12,15 @@ git log -p -- <файл>
 # file change history with diff including remane history
 git log --follow -p -- <файл>
 
-# Changes made in commit
+# changes made in commit
 git diff COMMIT~ COMMIT
 
-# Show files in commit
+# show files in commit
 git show --name-only <хэш комита>
 
-# Add file(s) to previous local commit
+# add file(s) to previous local commit
 git add <файл>
 git commit --amend
+
+# delete remote branch
+git push origin --delete <branch>

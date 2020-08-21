@@ -16,3 +16,6 @@
         }
     }
 }
+
+# update autoload file
+composer dump-autoload
