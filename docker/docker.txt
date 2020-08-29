@@ -32,3 +32,13 @@ docker-php-ext-enable xdebug
 -choose one you want
 -run docker pull with prefix "php:"
 -for example "docker pull php:7.2-fpm-alpine"
+
+# run composer install with docker
+# -rm means that container will be deleted after executing 'composer install'
+## run as root
+docker run --rm -v $(pwd):/app composer install
+## run as user with id=1000
+docker run --rm -v $(pwd):/app --user 1000:1000 composer install
+
+# run npm install with docker
+docker run --rm -v "$PWD":/usr/src/app -w /usr/src/app node npm install

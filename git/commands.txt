@@ -3,6 +3,9 @@
 2. git rm --cached [on each file you want to untrack]
 3. git update-index --assume-unchanged [path]  # без этого шага тоже сработало
 
+# one line log
+git log --oneline
+
 # file change history
 git log -- <файл>
 

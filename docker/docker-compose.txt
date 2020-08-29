@@ -9,3 +9,6 @@ docker-compose down
 
 # list
 docker-compose ps
+
+# run "phpunit" script in "app" container
+docker-compose exec app ./vendor/bin/phpunit
