@@ -21,3 +21,7 @@ git config --global alias.hist "log --color --graph --pretty=format:'%Cred%h%Cre
 
 # push into non bare repository
 to push into non bare repository, set this config "receive.denyCurrentBranch updateInstead" in the repository you want to push in
+
+# config global ignore file (default ignore rules for git on your PC. You can use it for your IDE files)
+git config --global core.excludesfile ~/.gitignore
+echo '.idea/' >> ~/.gitignore
