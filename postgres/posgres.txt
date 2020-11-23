@@ -5,7 +5,7 @@ systemctl restart postgresql-11.service
 select * from pg_catalog.pg_tables;
 
 # change tablespace
-alter table "tableOtusTest" set tablespace pg_default;
+alter table "myTable" set tablespace pg_default;
 	or
 \dt
 
@@ -19,15 +19,15 @@ select * from pg_tablespace;
 \conninfo
 
 # connect to DB
-\connect "otusTest"
+\connect "myDb"
 
 # new tablespace
-create tablespace "tsOtusTest" location '/db';
+create tablespace "myTablespace" location '/db';
 
 # new database
-create database "otusTestTempl1" template template1;
+create database "myDatabase" template template1;
 	or
-create database "otusTestTempl1";
+create database "myDatabase";
 
 # new user with 'createdb' priveleges
 create user timofey with createdb password 'password';
@@ -35,6 +35,6 @@ create user timofey with createdb password 'password';
 # list users/roles
 select * from pg_roles;
 
-# clear table and reset sequence
+# clear "movie" table and reset sequence
 delete from movie where 1=1;
 alter sequence movie_movie_id_seq restart with 1

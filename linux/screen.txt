@@ -1,12 +1,9 @@
 # list all screens
 screen -ls
 
-# detach screen (if screen attached than you cant attach to it using -r)
+# detach screen (if screen attached than you can't attach to it using -r)
 # so first you should detach it
 screen -d <session>
 
-# resume DETACHED screen
+# resume detached screen
 screen -r <session>
-
-# ?
-screen -x

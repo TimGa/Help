@@ -1,2 +1,17 @@
-# GU mapping export
+EXAMPLES
+--------
+# example 1
 mysql -utimofey -p phoenix_kpi -e "SELECT DISTINCT r.region_name, b.branch, nri_siteid, nri_band, nri_bs_number, geounit_id, rcn, cell_id, vendor FROM bad_cells_fact d JOIN QSC_branch b on b.branch_id = d.branch_id JOIN qsc_region r on r.region_id = b.region_id" -B > GU_map.tsv
+
+# example 2
+SELECT d.recdate, r.region_name, b.branch, d.standard_type, d.nri_site_id, d.nri_bs_number, d.nri_address, d.downtime
+FROM phoenix_kpi.cdt_v2_day_cell_fact d
+left join QSC_branch b on d.branch_id = b.branch_id
+left join qsc_region r on r.region_id = d.region_id
+where recdate >= '2020-08-03'
+INTO OUTFILE '/var/lib/mysql-files/new_cdt_1.csv'
+CHARACTER SET cp1251
+FIELDS ENCLOSED BY '"'
+TERMINATED BY ';'
+ESCAPED BY '\\'
+LINES TERMINATED BY '\r\n';

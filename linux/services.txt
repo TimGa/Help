@@ -1,5 +1,5 @@
 # search service
-systemctl list-units|grep postgresql
+systemctl list-units | grep postgresql
 
 # list all services
 systemctl

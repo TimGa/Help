@@ -1,18 +1,12 @@
-# Versions
+# versions
 ~1.2.3  # до 1.3 (не включительно)
 ^1.2.3  # до 2.0 (не включительно)
 
-# json
+# psr-4
 {
-    "name": "timga/factory-method",
-    
-    "require": {
-        "php": "^7.1"
-    },
-
     "autoload": {
         "psr-4": {
-            "TimGa\\FactoryMethod\\": "src/"
+            "Foo\\Bar\\": "src/"
         }
     }
 }
