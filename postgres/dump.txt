@@ -1,3 +1,0 @@
-pg_dump -d cinema > dump_cinema.sql
-
-pg_restore
